@@ -3,24 +3,31 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
+    <link href="css/foundation.css" rel="stylesheet"/>
+    <link href="css/Login.css" rel="stylesheet"/>
+    <script>
+    function next(){
+      switch (document.getElementById("inputUser").value) {
+        case "Investigador":
+            window.location.href="Investigador.html"
+          break;
+        case "Trabajador":
+            window.location.href="Trabajador.html"
+          break;
+        default:
+            alert("No existe");
+      }
+    }
+    </script>
     <title>Log in</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="Login.css" rel="stylesheet">
-
-  <body>
-    <div>
-      <form class="form-signin">
-        <h1 class="form-signin-heading">Iniciar sesi&oacute;n</h1>
-        <input type="text" id="inputUser" class="form-control" placeholder="Usuario" required autofocus>
-        <input type="text" id="inputPassword" class="form-control" placeholder="Contrase&ntilde;a" required>
-        <button class="btn btn-lg btn-primary btn-block" type="Ingresar">Entrar</button>
-      </form>
-    </div> <!-- /container -->
-  </body>
+    <body>
+      <div>
+        <form class="form-signin">
+          <h2 class="form-signin-heading">Iniciar sesi&oacute;n</h2>
+          <input type="text" id="inputUser" class="form-control" placeholder="Usuario" value="Investigador" required autofocus/>
+          <input type="text" id="inputPassword" class="form-control" placeholder="Contrase&ntilde;a"/>
+          <a  onclick="next()" class="button">Entrar</a><br/>
+        </form>
+      </div> <!-- /container -->
+    </body>
 </html>

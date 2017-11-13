@@ -8,10 +8,11 @@
 .button1 {
     position: relative;
     top: 50%;
-    background-color:#2E64FE;
 }
 .button2 {
     position: relative;
     top: 50%;
-    background-color:#2E64FE;
+}
+#tabla{
+  margin: 20px;
 }
